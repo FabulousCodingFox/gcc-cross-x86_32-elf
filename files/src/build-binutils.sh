@@ -3,7 +3,7 @@
 BINUTILS_VERSION=$1
 
 export PREFIX="/usr/local"
-export TARGET=x86_64-elf
+export TARGET=x86_32-elf
 export PATH="$PREFIX/bin:$PATH"
 
 cd $PREFIX/src

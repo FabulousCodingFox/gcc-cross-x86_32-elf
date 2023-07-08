@@ -1,4 +1,4 @@
-# gcc 8.2.0 x86_64-elf cross-compiler container
+# gcc 8.2.0 x86_32-elf cross-compiler container
 
 FROM debian:stretch
 LABEL maintainer "Brett Vickers <github.com/beevik>"
@@ -31,7 +31,7 @@ RUN set -x \
 COPY files/src /usr/local/src/
 
 # Copy gcc patches
-COPY files/gcc/t-x86_64-elf /usr/local/src/gcc-${GCC_VERSION}/gcc/config/i386/
+COPY files/gcc/t-x86_32-elf /usr/local/src/gcc-${GCC_VERSION}/gcc/config/i386/
 COPY files/gcc/config.gcc.patch /usr/local/src/gcc-${GCC_VERSION}/gcc/
 
 # Build and install binutils and the cross-compiler
